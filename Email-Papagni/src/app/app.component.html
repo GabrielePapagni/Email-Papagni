@@ -3,10 +3,15 @@
   <div>
     <div>
       <label for="titolo">Titolo:</label>
-      <input name="titolo">
+      <input name="titolo" #addTitolo>
     </div>
     <div>
       <label for="messaggio">Messaggio:</label>
-      <input name="messaggio">
+      <input name="messaggio" #addMessaggio>
+  </div>
+  <div>
+    <button (click)="addEmail(addTitolo, addMessaggio)">
+      Invia
+      </button>
   </div>
 </div>

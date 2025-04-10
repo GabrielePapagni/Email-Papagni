@@ -8,8 +8,12 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  addEmail(title: HTMLInputElement, link: HTMLInputElement): boolean {
-    console.log(`Aggiungendo il titolo: ${title.value} e il messaggio: ${link.value}`);
-  return false;
+  addEmail(titolo: HTMLInputElement, messaggio: HTMLInputElement): boolean {
+    let t = titolo.value;
+    let v = messaggio.value;
+    console.log(`Aggiungendo il titolo: `+t+ ` e il messaggio: `+ v);
+    console.log(`Aggiungendo il titolo: `+titolo.value+ ` e il messaggio: `+ messaggio.value);
+    console.log(`Aggiungendo il titolo: ${titolo.value} e il messaggio: ${messaggio.value}`);
+    return false;
   }
 }
