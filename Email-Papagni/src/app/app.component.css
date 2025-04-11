@@ -1,0 +1,8 @@
+.form {
+    background-color: lightgrey;
+    border: black;
+    border-radius: 10px;
+    height: 250px;
+    width: 450px;
+    align-items: center;
+}

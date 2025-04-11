@@ -1,17 +1,34 @@
-<div>
-  <h3>Manda una Email</h3>
-  <div>
-    <div>
-      <label for="titolo">Titolo:</label>
-      <input name="titolo" #addTitolo>
+<div class="container">
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+      <h1>{{title}}</h1>
+      <form id = "form_totale" class="form">
+        <div class="mt-5">
+          <label for="email">Email</label>
+          <div class="mt-2">
+            <input id = "email" name="email" autocomplete="email" type="text" #email>
+          </div>
+          <label for="oggetto">Oggetto</label>
+          <div class="mt-2">
+            <input id="oggetto" type="text" #oggetto>
+          </div>
+          <label for="testo" >Testo</label>
+          <div class="mt-2">
+            <input id="testo"type="text" #testo>
+          </div>
+          <div class="mt-2">
+            <button (click) = "aggiungiMail(email, oggetto, testo)" class="btn border">Invia</button>
+          </div>
+        </div>
+      </form>
+    
+      <div class="mt-5" class="emails">
+        @for(mail of emails; track mail){
+          <app-sent-mail [singola_mail]="mail"></app-sent-mail>
+        }
+      </div>
     </div>
-    <div>
-      <label for="messaggio">Messaggio:</label>
-      <input name="messaggio" #addMessaggio>
-  </div>
-  <div>
-    <button (click)="addEmail(addTitolo, addMessaggio)">
-      Invia
-      </button>
+    <div class="col-4"></div>
   </div>
 </div>
